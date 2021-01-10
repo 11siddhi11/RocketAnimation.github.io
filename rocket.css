@@ -1,0 +1,80 @@
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/14/13/49/cartoon-2640563_960_720.jpg");
+    
+    background-size:cover;
+}
+#rocket{
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+    transform: translate(-50%);
+    animation-name: rocket;
+    animation-duration: 8s;
+
+    /* animation-direction: alternate;
+    animation-iteration-count: infinite; */
+
+
+}
+#blast{
+    position: absolute;
+    left:50%;
+    bottom: 50%;
+    transform: translate(370px) ;
+    width: 0px;
+    height:0px;
+   animation-name: blast;
+   animation-delay: 8s;
+   animation-duration: 4s;
+  
+   
+}
+
+@keyframes rocket{
+   0%{
+  
+    transform: translate(-50%,0);
+   }
+
+
+
+   50%{
+      
+    transform: translate(-50%,-150vh) rotateZ(80deg);
+   
+
+   }
+
+   100%{
+    transform: translate(400px,-50vh) rotateZ(180deg); 
+    width: 50px;
+    height: 100px;
+ 
+   }
+}
+
+@keyframes blast{
+
+0%{
+width: 0px;
+    height: 0px;
+  
+}
+
+50%{
+width: 80px;
+height: 80px;
+}
+75%{
+height: 50px;
+width: 50px;
+
+}
+100% {
+width: 100px;
+height: 100px;
+}
+ 
+} 
